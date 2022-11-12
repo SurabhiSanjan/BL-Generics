@@ -2,9 +2,21 @@ package com.bridgelabz.Generics;
 
 public class PrintMax {
     public static void main(String[] args) {
-
-        System.out.println("Welcome to Generics";
+        //Checking maximum with integers
+        computeMax(100, 20, 30);
+        computeMax(10, 150, 30);
+        computeMax(40, 200, 100);
     }
 
+    private static void computeMax(Integer x, Integer y, Integer z) {
+        int max = x;
+        if (y.compareTo(max) > 0) {
+            max = y;
+        }
+        if (z.compareTo(max) > 0) {
+            max = z;
+        }
+        System.out.println("Maximum Number is:" + max);
+    }
 }
 
