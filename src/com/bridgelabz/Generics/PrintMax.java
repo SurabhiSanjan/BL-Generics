@@ -15,8 +15,6 @@ public class PrintMax {
         testMaximum("Peach","Apple","Banana");
         testMaximum("Cherry","Banana", "Apple", "Kiwi");
     }
-
-
     @SafeVarargs
     private static <T extends Comparable<T>> void testMaximum(T...input) {
         T max = input[0];
@@ -25,7 +23,10 @@ public class PrintMax {
                 max = t;
             }
         }
-        System.out.println("Maximum Number is:" + max);
+        printMax(max);
+    }
+    private static <T> void printMax(T max) {
+        System.out.println("Maximum Number is: " + max);
     }
 }
 
